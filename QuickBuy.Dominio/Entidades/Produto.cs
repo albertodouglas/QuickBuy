@@ -9,7 +9,10 @@
 
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+            if (string.IsNullOrEmpty(Nome))
+                AdicionarCritica("Nome não pode estar em branco");
+            if (string.IsNullOrEmpty(Descricao))
+                AdicionarCritica("Descrição não pode estar em branco");
         }
     }
 }
